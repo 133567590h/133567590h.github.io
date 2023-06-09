@@ -1,0 +1,1 @@
+var posts=["2023/06/09/我的第一篇博客/","2023/06/09/my-second-blog/"];function toRandomPost(){window.open('/'+posts[Math.floor(Math.random() * posts.length)],"_self");};
