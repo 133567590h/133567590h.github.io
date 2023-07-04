@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <title>数据库原理与应用 - Hexo</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <link rel="shortcut icon" href="https://i0.hdslb.com/bfs/article/47f36e9b45d4d0fe640bfc93442038855f6ce1c7.jpg" type="image/png" />
+    <meta name="description" content="数据库原理与应用（期末复习）按出题画的重点（简答题）先从好拿分的题入手1.E-R图（画出对应的图，并转换对应的关系模式）：one：画实体：画成长方形 关系：画成菱形 属性：画成圆形 键：在描述实体的所有属性中，可以唯一标识每个实体的属性称为键。键也是属于实体的属性，作为键的属性取值必须唯一且不能“空置”。 （ps：实体和关系都可以拥有属性） 联系类型： 1对1联系； 1对n联系； n对m联系； 找">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库原理与应用">
+<meta property="og:url" content="http://example.com/2023/06/14/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据库原理与应用（期末复习）按出题画的重点（简答题）先从好拿分的题入手1.E-R图（画出对应的图，并转换对应的关系模式）：one：画实体：画成长方形 关系：画成菱形 属性：画成圆形 键：在描述实体的所有属性中，可以唯一标识每个实体的属性称为键。键也是属于实体的属性，作为键的属性取值必须唯一且不能“空置”。 （ps：实体和关系都可以拥有属性） 联系类型： 1对1联系； 1对n联系； n对m联系； 找">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-06-14T02:06:37.000Z">
+<meta property="article:modified_time" content="2023-06-15T10:56:27.601Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1688436799043">
+    
+    <link rel="stylesheet" href="/css/style.css?v=1688436799043">
+
+    
+        
+            <link rel="stylesheet" href="/custom.css?v=1688436799043">
+        
+    
+
+    
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+
+
+    <script async src="/js/app.js?v=1688436799043"></script>
+    
+     
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="mdui-drawer-body-left">
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" 
+            style="background-image: url(https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1559251606-c623743a6d76?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTN8fHBpbmt8ZW58MHx8fHwxNjYzMDQ0Nzc2&ixlib=rb-1.2.1&w=1920)"
+        ></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="John Doe" class="mdui-btn mdui-btn-icon"><img src="https://i0.hdslb.com/bfs/article/47f36e9b45d4d0fe640bfc93442038855f6ce1c7.jpg" alt="John Doe"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="John Doe">
+            <img src="https://i0.hdslb.com/bfs/article/47f36e9b45d4d0fe640bfc93442038855f6ce1c7.jpg" alt="John Doe" alt="John Doe">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>6</div>
+        <div><span>Tags</span>0</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博主">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博主
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+        
+            
+            <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="Search" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+
+
+	<script async src="/js/search.js?v=1688436799044"></script>
+
+
+
+        
+            
+            <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/284438400"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/133567590h/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.zhihu.com/people/3oare9"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		>
+	</div>
+</div>
+
+        
+            
+            
+            
+    </aside>
+    <div class="nexmoe-copyright">
+        &copy; 2023 John Doe
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <br><a target="_blank" href="https://beian.miit.gov.cn/">鄂ICP备2020018486号</a>
+<br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+<img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a>
+
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+    <div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover"> 
+            <img src="https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1559251606-c623743a6d76?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTN8fHBpbmt8ZW58MHx8fHwxNjYzMDQ0Nzc2&ixlib=rb-1.2.1&w=1920" alt="数据库原理与应用" loading="lazy">
+            <h1>数据库原理与应用</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2023年06月14日</a>
+        
+        
+    <a><i class="nexmoefont icon-areachart"></i>约2.7k字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要9分钟</a>
+
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h1><span id="数据库原理与应用期末复习">数据库原理与应用（期末复习）</span></h1><h5><span id="按出题画的重点简答题先从好拿分的题入手">按出题画的重点（简答题）先从好拿分的题入手</span></h5><h2><span id="1e-r图画出对应的图并转换对应的关系模式">1.E-R图（画出对应的图，并转换对应的关系模式）：</span></h2><h4><span id="one画">one：画</span></h4><p><strong>实体：</strong>画成长方形</p>
+<p><strong>关系：</strong>画成菱形</p>
+<p><strong>属性：</strong>画成圆形</p>
+<p><strong>键：</strong>在描述实体的所有属性中，可以唯一标识每个实体的属性称为键。键也是属于实体的属性，作为键的属性取值必须唯一且不能“空置”。</p>
+<p>（ps：实体和关系都可以拥有属性）</p>
+<p>联系类型：</p>
+<p>1对1联系；</p>
+<p>1对n联系；</p>
+<p>n对m联系；</p>
+<h5><span id="找出题目给出的有哪些主体实体并弄清有什么属性同时实体之间的关系并写出之间的联系">找出题目给出的有哪些主体（实体）并弄清有什么属性，同时实体之间的关系，并写出之间的联系。</span></h5><h2><span id>———————————————————————————</span></h2><h4><span id="two转化关系模型">two：转化关系模型</span></h4><p>第一步：将各个实体的名字转换为各个关系模式的名字</p>
+<h6><span id="就是把实体名写好例如有个实体学生属性为学号姓名转化后-学生学号姓名这种格式哪个是主码就在下面划横线">（就是把实体名写好例如有个实体学生，属性为：学号，姓名，转化后。学生：（<u>学号</u>，姓名）这种格式，哪个是主码就在下面划横线）</span></h6><p> 第二步：实体的属性就是关系的属性，实体的码就是关系的码</p>
+<p> 第三步：实体间联系的转换 1对1联系：在任意一方加入对方的主码并设为其外码，并加入联系 本身的属性</p>
+<h6><span id="可以在两个实体类型转换成的两个关系模式中任意一个关系模式的属性中加入另一个关系模式的键和联系类型的属性">（可以在两个实体类型转换成的两个关系模式中任意一个关系模式的属性中加入另一个关系模式的键和联系类型的属性。）</span></h6><p> 1对n联系：将1方的主码加入n方作为外码，并同时将联系的属性加 入n方 </p>
+<h6><span id="则在n端实体类型转换成的关系模式中加入1端实体类型的键和联系类型的属性">（则在N端实体类型转换成的关系模式中加入1端实体类型的键和联系类型的属性。）</span></h6><h5><span id="看着有点绕举个例子假设我们有两个实体学生学号姓名和老师工号姓名老师对于学生是管理的关系管理有教学时间这个属性">看着有点绕：举个例子假设我们有两个实体，学生（学号，姓名）和老师（工号，姓名），老师对于学生是管理的关系，管理有教学时间这个属性。</span></h5><h5><span id="如果老师与学生之间是11联系管理可以在学生关系模式或者老师关系模式中加入学号学号是外键">如果老师与学生之间是1:1联系“管理”，可以在“学生”关系模式或者“老师”关系模式中加入学号（学号是外键）。</span></h5><h5><span id="如果老师与学生之间是1n联系管理则在学生关系模式下加入工号和教学时间工号是1的键教学时间是关系的属性">如果老师与学生之间是1:n联系“管理”,则在”学生“关系模式下加入工号和教学时间（工号是1的键，教学时间是关系的属性）</span></h5><p>n对m联系：将联系本身转换为一个关系模式，将联系双方的主码加 入其中设为码，并将联系的属性也加入其中</p>
+<h6><span id="则将联系类型也转换成关系模式其属性为两端实体类型的键加上联系类型的属性而键为两端实体键的组合">（则将联系类型也转换成关系模式，其属性为两端实体类型的键加上联系类型的属性，而键为两端实体键的组合。）</span></h6><h5><span id="如果是老师与学生是nm的联系管理则把关系单独写下来">如果是老师与学生是n:m的联系”管理“，则把关系单独写下来</span></h5><h5><span id="管理学号工号教学时间">管理（学号，工号，教学时间）</span></h5><p>等会找一个题再复习一下</p>
+<hr>
+<h2><span id="2关系理论判断范式求候选码">2.关系理论（判断范式，求候选码）</span></h2><h6><span id="本质上属于数学内容了离散数学">（本质上属于数学内容了，离散数学）</span></h6><h3><span id="求所有候选码">求所有候选码</span></h3><p>首先发几个概念：</p>
+<h3><span id="码键真的是mm">码（键）<del>真的是mm</del>：</span></h3><p>（1）候选码：是一个属性组（或者属性），通过该属性组能推出所有的属 性，并且该属性组的任意子集都不能再推出所有属性了。即在满足完全函数 依赖的前提下，还得是最小的属性组。</p>
+<p>（2）超码：能推出所有属性的属性组的集合，根据概念可知，候选码是极小 的超码集，是超码的子集  </p>
+<p>（<strong>3）主码：当有多个候选码时（如例题那样），挑出一个作为主码，简称码</strong> </p>
+<p>（4）主属性：包含在任何一个候选码中的属性，如例题中的ABCDE都是主属性 </p>
+<p>（5）非主属性：不包含在任何一个候选码中的属性，如例题中的G </p>
+<p>（6）外码：关系模式R中，若有一个属性或属性组X，它不是R的码，但X是另 一个关系模式S中的码，称X是R的外码 </p>
+<p>（7）全码：最极端情况下，整个属性组都是码，称为全码</p>
+<h3><span id="函数依赖">函数依赖：</span></h3><p>（1）非平凡的函数依赖：X Y，Y X （2）平凡的函数依赖：X Y，Y X 1、函数依赖 （3）完全函数依赖：X Y，并且对于X的任意真子集X，都有X Y。则称Y完全 函数依赖于X。记作X Y。 （4）部分函数依赖：Y不完全函数依赖于X。记作X Y。例如A C，又有AB C， 那么C就是部分函数依赖于AB的，这种情况会造成数据冗余</p>
+<h3><span id="范式">范式：</span></h3><p>(1)1NF：也叫第一范式，设R是一个关系模式，如果R中每一个属性A的属性名和属性值都是不可再分的，则称R属于第一范式，记作R属于1NF</p>
+<p>(2)2NF:第二范式，在满足1NF的前提下，且每一个非主属性都完全依赖与码，则R属于2NF</p>
+<p>(3)3NF:在满足2NF的前提下，不包含非主属性对码的传递函数依赖（即码 应该直接决定非主属性，不能间接决定）</p>
+<p> 传递函数依赖：若X——&gt; Y，Y——&gt; Z，且Z—/—&gt; Y，Y—/—&gt; X，有X——&gt; Z，此时称Z对X有传递函数依赖</p>
+<p>(4)BCNF：消除任何属性对候选码的传递依赖，即每一个决定因素都包含 码，表现为在函数依赖集当中，左边的都包含候选码（整个属性组！）</p>
+<h3><span id="求所有候选码的方法">求所有候选码的方法：</span></h3><h5><span id="找出一定属于候选码的属性可能属于候选码的属性以及不属于候选码的属性">找出一定属于候选码的属性，可能属于候选码的属性，以及不属于候选码的属性。</span></h5><p>方法如下：<strong>one:</strong></p>
+<p> 一定属于候选码的属性：只出现在左边，或者左右都没出现 ；</p>
+<p>可能属于候选码的属性：左右都出现 ；</p>
+<p>不属于候选码的属性：只出现在右边。</p>
+<p>如果都没出现则一定是。</p>
+<p><strong>two:</strong></p>
+<p><strong>先对确定的属性求闭包</strong>，若不能构成候选码，再将确定的属性和待定的属性进行组合，做闭包运算，直到得到的属性组能够推出全部的属性。 </p>
+<h4><span id> </span></h4><h3><span id="判断范式和分解方法">判断范式和分解方法</span></h3><p>R为{A，B，C，D} 2NF（没有部分函数依赖）：若码是AB，F中若为（A C，AB D}，对于C，只 需要A就能推出，那么C部分函数依赖于码AB，这种情况就不是2NF。 若要分解为2NF，只需将不符合要求的拿出来，即分为R {A，B，D}和R {A，C} → → ¢ → → → → i. 3NF（没有部分函数依赖与传递函数依赖）：若码是AB，F若为{AB C，C D}， 这里不存在部分函数依赖。但是对于D，需要AB推出C后才能间接推出D，那么D 传递函数依赖于AB，不满足3NF。 若要分解为3N F，同样将不符合要求的拿出来，即分为R {A，B，C}和R {C，D}。</p>
+<p>BCNF（没有部分函数依赖，同时每一个决定因素都包含码）： 若R是（A，B，C），F是{AC B，AB C，B C}，候选码则是AC和AB。这里不存在 部分函数依赖，但对于B C来说，决定因素B不包含码，因此它不是BCNF。</p>
+<h3><span id="最小函数依赖集">最小函数依赖集</span></h3><hr>
+<h2><span id="3数据库管理系统的主要功能">3.数据库管理系统的主要功能</span></h2><h5><span id="1数据库定义功能">①数据库定义功能：</span></h5><p>DBMS提供相应数据定义语言(DDL)来定义数据库结构，DDL用于刻画数据库的框架，并被保存在数据字典中。定义功能包括外部模式、概念模式、内部模式及模式间映像的定义数据库完整性定义，安全性定义，存取路径等的定义。</p>
+<h5><span id="2数据存取功能">②数据存取功能：</span></h5><p>DBMS提供数据操纵语言(DML),以实现对数据库数据的基本存取操作，如检索、插人、修改和删除。</p>
+<h5><span id="3数据库的建立和维护功能">③数据库的建立和维护功能：</span></h5><p>数据库的建立功能是指DBMS根据数据库的定义，把实际的数据库数据存储到物理存储设备上，完成实际存放数据的数据库(目标数据库)的建库工作。<br>数据库的维护功能主要包括数据库运行时记录工作日志，监视数据库的性能，完成数据库的重组和重构功能。重组是指DBMS提供重组程序用来重新整理零乱的数据库，以便回收已删除数据所占用的存储空间，并把记录从溢出区移到主数据区的自由空间中。重构功能是指DBMS提供重构程序用以改善数据库的性能。在动态环境中，数据库运行一段时间后数据库使用的模式与最初设计的模式有了改变，或原来构造的实体联系方法需要改变，或新的应用要求增加新的数据类型。此时，数据库出现性能下降的趋势。为了改善数据库的性能，需对数据库进行重构。通常把在逻辑模式和内部模式上的改变称为“重构”。数据库的重组与重构是有区别的。重组一般不会影响现有的应用程序，而重构则可能对应用程序有所影响。除上述之外，DBMS还要具备数据库的恢复功能。由于硬件和软件的故障，或由于操作上的失误等原因会导致数据库系统在运行过程中产生故障，致使数据库中数据或某些程序失效。DBMS的故障恢复功能，就是为这种情况提供最有效的措施和有力的工具，如提供转储和检查点等手段。故障恢复功能可把故障造成的影响限制在最小的范围内，并让系统以最快的速度排除故障，恢复并重新启动数据库系统，使故障造成的损失降至最小。</p>
+<h5><span id="4数据组织-存储和管理功能">④数据组织、存储和管理功能：</span></h5><p>DBMS要分类组织、存储和管理数据库中各种数据，包括用户数据、数据字典、存取路径等。要确定以何种文件结构和存取方式在存储设备上组织、存储这些数据，如何实现数据之间的联系，以提高存储空间利用率和存取效率。</p>
+<h5><span id="5通信功能">⑤通信功能：</span></h5><p>DBMS具有与操作系统的联机处理、分时系统及远程作业输入的相应接口，负责处理数据的传送。对网络环境下的数据库系统，还应包括DBMS与网络中其他软件系统的通信功能、数据库之间的互操作功能。</p>
+
+    
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>Author：</strong>John Doe<br>
+        <strong>Link：</strong><a href="http://example.com/2023/06/14/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;14&#x2F;%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;06&#x2F;14&#x2F;%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+</div>
+  
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <script src="https://giscus.app/client.js"
+    data-repo="nexmoe/nexmoe.com"
+    data-repo-id="R_kgDOJI1XUA"
+    data-category="General"
+    data-category-id="DIC_kwDOJI1XUM4CU1nn"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+</script>
+
+      </div>
+  
+</div>
+</div>
+        <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">数据库原理与应用（期末复习）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">按出题画的重点（简答题）先从好拿分的题入手</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">1.E-R图（画出对应的图，并转换对应的关系模式）：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">one：画</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.1.0.1.1.</span> <span class="toc-text">找出题目给出的有哪些主体（实体）并弄清有什么属性，同时实体之间的关系，并写出之间的联系。</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.2.</span> <span class="toc-text">———————————————————————————</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">1.2.0.1.</span> <span class="toc-text">two：转化关系模型</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link"><span class="toc-number">1.2.0.1.0.1.</span> <span class="toc-text">（就是把实体名写好例如有个实体学生，属性为：学号，姓名，转化后。学生：（学号，姓名）这种格式，哪个是主码就在下面划横线）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link"><span class="toc-number">1.2.0.1.0.2.</span> <span class="toc-text">（可以在两个实体类型转换成的两个关系模式中任意一个关系模式的属性中加入另一个关系模式的键和联系类型的属性。）</span></a></li><li class="toc-item toc-level-6"><a class="toc-link"><span class="toc-number">1.2.0.1.0.3.</span> <span class="toc-text">（则在N端实体类型转换成的关系模式中加入1端实体类型的键和联系类型的属性。）</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.2.0.1.1.</span> <span class="toc-text">看着有点绕：举个例子假设我们有两个实体，学生（学号，姓名）和老师（工号，姓名），老师对于学生是管理的关系，管理有教学时间这个属性。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.2.0.1.2.</span> <span class="toc-text">如果老师与学生之间是1:1联系“管理”，可以在“学生”关系模式或者“老师”关系模式中加入学号（学号是外键）。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.2.0.1.3.</span> <span class="toc-text">如果老师与学生之间是1:n联系“管理”,则在”学生“关系模式下加入工号和教学时间（工号是1的键，教学时间是关系的属性）</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link"><span class="toc-number">1.2.0.1.3.1.</span> <span class="toc-text">（则将联系类型也转换成关系模式，其属性为两端实体类型的键加上联系类型的属性，而键为两端实体键的组合。）</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.2.0.1.4.</span> <span class="toc-text">如果是老师与学生是n:m的联系”管理“，则把关系单独写下来</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.2.0.1.5.</span> <span class="toc-text">管理（学号，工号，教学时间）</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.3.</span> <span class="toc-text">2.关系理论（判断范式，求候选码）</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link"><span class="toc-number">1.3.0.0.0.1.</span> <span class="toc-text">（本质上属于数学内容了，离散数学）</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.1.</span> <span class="toc-text">求所有候选码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.2.</span> <span class="toc-text">码（键）真的是mm：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.3.</span> <span class="toc-text">函数依赖：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.4.</span> <span class="toc-text">范式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.5.</span> <span class="toc-text">求所有候选码的方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.3.5.0.1.</span> <span class="toc-text">找出一定属于候选码的属性，可能属于候选码的属性，以及不属于候选码的属性。</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">1.3.5.1.</span> <span class="toc-text"> </span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.6.</span> <span class="toc-text">判断范式和分解方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.3.7.</span> <span class="toc-text">最小函数依赖集</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.4.</span> <span class="toc-text">3.数据库管理系统的主要功能</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.4.0.0.1.</span> <span class="toc-text">①数据库定义功能：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.4.0.0.2.</span> <span class="toc-text">②数据存取功能：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.4.0.0.3.</span> <span class="toc-text">③数据库的建立和维护功能：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.4.0.0.4.</span> <span class="toc-text">④数据组织、存储和管理功能：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.4.0.0.5.</span> <span class="toc-text">⑤通信功能：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+    </div>
+    <div id="nexmoe-search-space">
+	<div class="search-container">
+		<div class="search-header">
+			<div class="search-input-container">
+				<input
+					class="search-input"
+					type="text"
+					placeholder="Search"
+					oninput="sinput();"
+				/>
+			</div>
+			<a class="search-close" onclick="sclose();">×</a>
+		</div>
+		<div class="search-body"></div>
+	</div>
+</div>
+
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
